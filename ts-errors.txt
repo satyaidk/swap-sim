@@ -1,0 +1,2 @@
+components/navbar.tsx(64,25): error TS2322: Type 'string' is not assignable to type 'UrlObject | RouteImpl<string>'.
+components/profit-calculator.tsx(291,18): error TS2304: Cannot find name 'TrendingUp'.
