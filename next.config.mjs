@@ -10,8 +10,6 @@ const nextConfig = {
   experimental: {
     typedRoutes: true,
   },
-  // Fix: resolve workspace root warning caused by multiple lockfiles
-  outputFileTracingRoot: path.join(__dirname, "../../"),
 }
 
 export default nextConfig
