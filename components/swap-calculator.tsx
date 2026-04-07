@@ -38,8 +38,8 @@ export function SwapCalculator() {
         setFromAmount(data.fromAmount || "")
         setFromPrice(data.fromPrice || "")
         setToPrice(data.toPrice || "")
-      } catch (err) {
-        console.error("Error loading saved data:", err)
+      } catch {
+        console.error("Error loading saved data")
       }
     }
   }, [])

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import type { Route } from "next"
 import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -60,9 +61,8 @@ export function Navbar({ walletAddress, isConnected, onConnect, onDisconnect }: 
             <div className="flex items-center gap-1 sm:gap-2 z-10 bg-background/40 p-1 rounded-2xl border border-white/5 shadow-inner backdrop-blur-md">
               {navLinks.map((link) => {
                 const active = isActive(link.path)
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 return (
-                  <Link href={link.path as any} key={link.path} className="relative">
+                  <Link href={link.path as Route} key={link.path} className="relative">
                     <Button 
                       variant="ghost" 
                       className={`relative z-10 text-sm font-semibold transition-colors rounded-xl ${active ? 'text-primary-foreground' : 'text-foreground hover:text-primary'}`}

@@ -38,8 +38,8 @@ export function ProfitCalculator({ walletAddress }: { walletAddress?: string | n
         setHoldings(data.holdings || "")
         setCurrentPrice(data.currentPrice || "")
         setTargetPrice(data.targetPrice || "")
-      } catch (err) {
-        console.error("Error loading saved data", err)
+      } catch {
+        console.error("Error loading saved data")
       }
     }
   }, [])
